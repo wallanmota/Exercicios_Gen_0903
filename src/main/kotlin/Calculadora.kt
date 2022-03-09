@@ -17,22 +17,4 @@ class Calculadora {
         return n1 / n2
     }
 
-    fun verifica(): Int{
-        println("Qual operação deseja fazer:\n" +
-                "1- Soma\n" +
-                "2- Subtração\n" +
-                "3- Multiplicação\n" +
-                "4- Divisão")
-        var op = readLine()!!.toInt()
-        while(op <1 || op >4){
-            println("Opção inválida!!!")
-            println("Qual operação deseja fazer:\n" +
-                    "1- Soma\n" +
-                    "2- Subtração\n" +
-                    "3- Multiplicação\n" +
-                    "4- Divisão")
-            op = readLine()!!.toInt()
-        }
-        return op
-    }
 }

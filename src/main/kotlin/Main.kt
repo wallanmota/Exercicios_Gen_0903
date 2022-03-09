@@ -10,7 +10,26 @@ fun main() {
     print("Digite o segundo número: ")
     var n2 = readLine()!!.toInt()
 
-    val op = calculadora.verifica()
+    fun verifica(): Int{
+        println("Qual operação deseja fazer:\n" +
+                "1- Soma\n" +
+                "2- Subtração\n" +
+                "3- Multiplicação\n" +
+                "4- Divisão")
+        var op = readLine()!!.toInt()
+        while(op <1 || op >4){
+            println("Opção inválida!!!")
+            println("Qual operação deseja fazer:\n" +
+                    "1- Soma\n" +
+                    "2- Subtração\n" +
+                    "3- Multiplicação\n" +
+                    "4- Divisão")
+            op = readLine()!!.toInt()
+        }
+        return op
+    }
+
+    val op = verifica()
     var res = 0
 
     if(n2 == 0 && op == 4){
@@ -25,4 +44,5 @@ fun main() {
         4 -> res = calculadora.divi(n1,n2)
     }
     println("O resultado da operação é $res")
+
 }
